@@ -1,0 +1,83 @@
+.cards-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Alinha os cards no topo se alturas variarem */
+}
+.custom-card {
+    flex: 1 1 300px; /* Cada card ocupa pelo menos 300px, cresce igualmente */
+    max-width: 400px; /* Limita largura máxima */
+    /* Outros estilos existentes... */
+}
+.custom-card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 24px;
+    width: 320px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.impact-label {
+    font-size: 10px;
+    color: #888;
+    font-weight: bold;
+}
+h1 {
+  color: #2e7d32;           /* Muda a cor para um verde "eco" */
+  font-family: 'Arial', sans-serif;
+  font-size: 36px; /* Define o tamanho da fonte */
+  font-weight: bold;         
+  text-align: center;       /* Centraliza o texto */
+  text-transform: uppercase; /* Deixa tudo em maiúsculo */
+}
+
+h3 {
+    color: #1a3a34;
+    margin: 0 0 8px 0;
+    font-size: 1.2rem;
+}
+
+.description {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.stats small {
+    display: block;
+    color: #aaa;
+    font-size: 10px;
+    margin-top: 15px;
+}
+
+.total-value {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1a3a34;
+}
+
+.total-value span {
+    font-size: 1rem;
+    color: #888;
+}
+
+.btn-action {
+    width: 100%;
+    background-color: #13694f;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}

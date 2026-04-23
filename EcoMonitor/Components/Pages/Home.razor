@@ -1,0 +1,128 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+<PageTitle>Home</PageTitle>
+
+<h1><img src="eco.png" alt="ECO MONITOR" width="537" height="144"/></h1>
+
+<div class="cards-container">
+
+<!-- Card 1: RECICLAGEM DE PLÁSTICO -->
+<div class="custom-card">
+    <div class="card-header">
+        <img src="simbolo-de-reciclagem.png" alt="Reciclar" class="icon" width="50" height="50"/>
+    </div>
+
+    <div class="card-content">
+        <h3>RECICLAGEM DE PLÁSTICO</h3>
+        <p class="description">REGRISTRE SUA AÇÃO DO DIA.</p>
+        
+        <div class="stats">
+            <span class="points-label">PONTOS POR AÇÃO: + 1</span>
+            
+
+     <p role="status"><small>TOTAL ACUMULADO</small> @currentCount </p>
+
+       <!-- BARRA DE PROGRESSO -->
+        <div class="progress mb-3">
+            <div class="progress-bar bg-info" style="width: @(CalcularProgresso(currentCount, 10))%"></div>
+        </div>
+
+     @if (currentCount >= 10)
+{
+    <div class="alert alert-success text-center">
+        <div>🏅Meta Alcançada!🏅</div>        
+     <div>Você é um defensor do meio ambiente!🌍♻️</div>
+    </div>
+    
+}
+
+<button class="btn btn-primary" @onclick="IncrementCount">Registrar Atividade</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card 2: ÁRVORES PLANTADAS -->
+<div class="custom-card">
+    <div class="card-header">
+        <img src="broto.png" alt="Reciclar" class="icon" width="50" height="50"/>
+    </div>
+
+    <div class="card-content">
+        <h3>ÁRVORES PLANTADAS</h3>
+        <p class="description">REGRISTRE SUA AÇÃO DO DIA.</p>
+        
+        <div class="stats">
+            <span class="points-label">PONTOS POR AÇÃO: + 5</span>
+            
+
+     <p role="status"><small>TOTAL ACUMULADO</small> @currentCount2</p>
+
+<!-- BARRA DE PROGRESSO -->
+        <div class="progress mb-3">
+            <div class="progress-bar bg-info" style="width: @(CalcularProgresso(currentCount2, 100))%"></div>
+        </div>
+        
+           @if (currentCount2 >= 100)
+{
+    <div class="alert alert-success text-center">
+        <div>🏅Meta Alcançada!🏅</div>        
+     <div>Você é um defensor do meio ambiente!🌍♻️</div>
+    </div>
+}
+<button class="btn btn-primary" @onclick="IncrementCount2">Registrar Atividade</button>
+        </div>
+    </div>
+</div>
+
+<!-- Card 3: DESCARTE DE ELETRÔNICOS -->
+<div class="custom-card">
+    <div class="card-header">
+        <img src="dispositivos-eletronicos.png" alt="Reciclar" class="icon" width="50" height="50"/>
+    </div>
+
+    <div class="card-content">
+        <h3>DESCARTE DE ELETRÔNICOS</h3>
+        <p class="description">REGRISTRE SUA AÇÃO DO DIA.</p>
+        
+        <div class="stats">
+            <span class="points-label">PONTOS POR AÇÃO: + 10</span>
+            
+
+     <p role="status"><small>TOTAL ACUMULADO</small> @currentCount3</p>
+     
+     <!-- BARRA DE PROGRESSO -->
+        <div class="progress mb-3">
+            <div class="progress-bar bg-info" style="width: @(CalcularProgresso(currentCount3, 1000))%"></div>
+        </div>
+
+               @if (currentCount3 >= 1000)
+{
+    <div class="alert alert-success text-center">
+        <div> 🏅 Meta Alcançada!🏅</div>        
+     <div>Você é um defensor do meio ambiente!🌍♻️</div>
+    </div>
+}
+<button class="btn btn-primary" @onclick="IncrementCount3">Registrar Atividade</button>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+@code {
+    private int currentCount = 0;
+    private int currentCount2 = 0;  
+    private int currentCount3 = 0;
+    private void IncrementCount()=>currentCount++;
+    private void IncrementCount2()=>currentCount2 += 5;
+    private void IncrementCount3()=>currentCount3 += 10;
+
+   // Método para calcular progresso (retorna porcentagem)
+        private double CalcularProgresso(int current, int max) => (double)current / max * 100;
+
+}
