@@ -14,5 +14,5 @@ Guia de Execução:/Abrir CMD do computador
                  4°│info: Microsoft.Hosting.Lifetime[14]
                           Now listening on: https://localhost:0000 (Ctrl + click do mouse ou copie e cole no navegador)
 
-<img width="250" height="140,5" alt="2026-04-22 23-00-30 (1)" src="https://github.com/user-attachments/assets/cdfe624c-f02c-4f52-af39-eda68dbc90e0" />
+<img width="500" height="281" alt="2026-04-22 23-00-30 (1)" src="https://github.com/user-attachments/assets/cdfe624c-f02c-4f52-af39-eda68dbc90e0" />
 
